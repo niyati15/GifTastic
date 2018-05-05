@@ -1,0 +1,7 @@
+.jumbotron 
+{ min-height: 100px; }
+
+#movie-form{
+    margin: 0 auto;
+    width:60%;
+}
