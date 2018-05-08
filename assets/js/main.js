@@ -5,18 +5,9 @@ function renderButtons() {
   $("#buttons-view").empty();
   for (var i = 0; i < characters.length; i++) {
     var a = $("<button>");
-    // Adds a class of character to our button
     a.addClass("character");
-    // Added a data-attribute
     a.attr("data-name", characters[i]);
-    // Provided the initial button text
     a.text(characters[i]);
-    // Added the button to the buttons-view div
-    // a.attr("src", characters[i].images.fixed_height_still.url);
-    // a.attr("data-still", characters[i].images.fixed_height_still.url);
-    // a.attr("data-animate", characters[i].images.fixed_height.url);
-    // a.attr("data-state", "still");
-
     $("#buttons-view").append(a);
   }
 }
@@ -53,19 +44,30 @@ function displaycharacterInfo() {
       var gifDiv = $("<div class='item'>");
 
       var personImage = $("<img>");
-      // personImage.attr("src", results[i].images.fixed_height.url);
       personImage.attr("src", results[i].images.fixed_height_still.url);
       personImage.attr("data-still", results[i].images.fixed_height_still.url);
       personImage.attr("data-animate", results[i].images.fixed_height.url);
       personImage.attr("data-state", "still");
       personImage.attr("class", "gif");
-      // gifDiv.prepend(p);
       gifDiv.prepend(personImage);
 
       $("#characters-view").prepend(gifDiv);
     }
+    $(".gif").on("click", function () {
+      var state = $(this).attr("data-state");
+      if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+    });
+
+
+
   });
-  
+
 }
 $(document).on("click", ".character", displaycharacterInfo);
 
