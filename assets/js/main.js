@@ -40,13 +40,14 @@ function displaycharacterInfo() {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
+    $("#characters-view").empty();
     console.log(response);
     var results = response.data;
     for (var i = 0; i < results.length; i++) {
       var gifDiv = $("<div class='item'>");
 
       var personImage = $("<img>");
-      personImage.attr("src", results[i].embed_url);
+      personImage.attr("src", results[i].images.fixed_height.url);
 
       // gifDiv.prepend(p);
       gifDiv.prepend(personImage);
