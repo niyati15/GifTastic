@@ -1,6 +1,7 @@
 console.log("Hello");
 var characters = ["Harry Potter", "Ron Weasley", "Hermione Granger"];
 function renderButtons() {
+  console.log("render buttons called");
   $("#buttons-view").empty();
   for (var i = 0; i < characters.length; i++) {
     var a = $("<button>");
@@ -11,6 +12,11 @@ function renderButtons() {
     // Provided the initial button text
     a.text(characters[i]);
     // Added the button to the buttons-view div
+    // a.attr("src", characters[i].images.fixed_height_still.url);
+    // a.attr("data-still", characters[i].images.fixed_height_still.url);
+    // a.attr("data-animate", characters[i].images.fixed_height.url);
+    // a.attr("data-state", "still");
+
     $("#buttons-view").append(a);
   }
 }
@@ -30,7 +36,7 @@ $("#add-character").on("click", function (event) {
 });
 
 function displaycharacterInfo() {
-
+  console.log("display character info called");
   var character = $(this).attr("data-name");
   console.log(character);
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -47,17 +53,23 @@ function displaycharacterInfo() {
       var gifDiv = $("<div class='item'>");
 
       var personImage = $("<img>");
-      personImage.attr("src", results[i].images.fixed_height.url);
-
+      // personImage.attr("src", results[i].images.fixed_height.url);
+      personImage.attr("src", results[i].images.fixed_height_still.url);
+      personImage.attr("data-still", results[i].images.fixed_height_still.url);
+      personImage.attr("data-animate", results[i].images.fixed_height.url);
+      personImage.attr("data-state", "still");
+      personImage.attr("class", "gif");
       // gifDiv.prepend(p);
       gifDiv.prepend(personImage);
 
       $("#characters-view").prepend(gifDiv);
     }
   });
-
+  
 }
 $(document).on("click", ".character", displaycharacterInfo);
 
 renderButtons();
+
+
 
