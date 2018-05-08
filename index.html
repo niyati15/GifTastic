@@ -10,37 +10,45 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <title>Movie-Giftastic</title>
+    <title>Harry Potter Giphy Search</title>
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <!-- <div class="jumbotron jumbotron-fluid"> -->
         <div class="container-fluid">
-            <h1 class="display-4">Movie-Giftastic</h1>
-
+            <h1 class="display-4">Harry Potter Giphy Search</h1>
         </div>
-    </div>
+    <!-- </div> -->
     <div class="container">
-        <form id="movie-form align-items-center">
-            <div class="form-row align-items-center">
-                <div class="col-auto">
-                    <label class="sr-only" for="movie-input">Name</label>
-                    <input type="text" class="form-control mb-2" id="movie-input" placeholder="Add a movie">
+        <form id="character-form align-items-center">
+            <div class="form-row">
+                <div class="col-auto col-md-offset-4 ">
+                    <label class="sr-only" for="character-input">Name</label>
+                    <input type="text" class="form-control mb-2" id="character-input" placeholder="Search for a character">
                 </div>
-                <div class="col-auto">
-
-                </div>
-                <div class="col-auto">
-
-                </div>
-                <div class="col-auto">
-                    <button id="add-movie" type="submit" class="btn btn-light mb-2" value="Add a Movie">Submit</button>
+                <div class="col-auto  col-md-offset-4">
+                    <button id="add-character" type="submit" class="btn btn-light mb-2">Submit</button>
                 </div>
             </div>
         </form>
         <div class="row">
-            <div id="movies-view"></div>
+            <div id="buttons-view"></div>
+            <div id="characters-view"></div>
         </div>
+        <!-- cards from here -->
+
+        <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="https://www.irishtimes.com/culture/books/harry-potter-is-there-a-less-appealing-fictional-character-1.3170112" alt="Card image cap">
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Harry_Potter_character_poster.jpg/220px-Harry_Potter_character_poster.jpg" alt="Card image cap">
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://www.engadget.com/2017/11/08/niantic-labs-developing-harry-potter-game/" alt="Card image cap">
+              </div>
+            </div>
+          </div>
 
     </div>
 
