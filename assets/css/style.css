@@ -24,3 +24,6 @@ img{
 #buttons-view{
     display: inline;
 }
+button{
+    margin: 5px;
+}

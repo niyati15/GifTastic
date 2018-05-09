@@ -9,6 +9,7 @@ function renderButtons() {
     a.attr("data-name", characters[i]);
     a.text(characters[i]);
     $("#buttons-view").append(a);
+
   }
 }
 
