@@ -16,6 +16,11 @@ img{
     border: 13px;
     margin: 15px;
     object-fit: cover;
+    
+}
+#characters-view{
+    float:left;
+}
+#buttons-view{
     display: inline;
-    float: left;
 }
