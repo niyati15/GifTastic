@@ -9,3 +9,13 @@
 body{
     background-image: url("../assets/images/background1.jpg");
 }
+
+img{
+    height: 230px;
+    width: 250px;
+    border: 13px;
+    margin: 15px;
+    object-fit: cover;
+    display: inline;
+    float: left;
+}
