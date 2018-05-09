@@ -49,7 +49,7 @@ function displaycharacterInfo() {
       personImage.attr("data-animate", results[i].images.fixed_height.url);
       personImage.attr("data-state", "still");
       personImage.attr("class", "gif");
-      gifDiv.prepend(personImage);
+      gifDiv.append(personImage);
 
       $("#characters-view").prepend(gifDiv);
     }
