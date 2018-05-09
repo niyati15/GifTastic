@@ -7,23 +7,31 @@
 }
 
 body{
-    background-image: url("../assets/images/background1.jpg");
+    background-image: url("/Users/niyatishah/Desktop/my-code/GifTastic/assets/images/background1.jpg");
 }
 
 img{
     height: 230px;
     width: 250px;
-    border: 13px;
+    /* border: 13px; */
     margin: 15px;
-    object-fit: cover;
+    border-radius: 15px;
     
 }
 #characters-view{
     float:left;
+    /* display: inline-block; */
 }
 #buttons-view{
-    display: inline;
+    /* display: inline; */
 }
 button{
     margin: 5px;
+}
+
+.clearfix{
+    overflow: auto;
+}
+.display-4{
+    color: white;
 }

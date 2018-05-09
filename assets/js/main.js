@@ -22,9 +22,6 @@ $("#add-character").on("click", function (event) {
   this.form.reset();
   renderButtons();
   console.log("characterAdded:", characterAdded);
-
-
-
 });
 
 function displaycharacterInfo() {
@@ -64,9 +61,6 @@ function displaycharacterInfo() {
         $(this).attr("data-state", "still");
       }
     });
-
-
-
   });
 
 }
